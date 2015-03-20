@@ -364,3 +364,12 @@ that regex replaces references to images with thumbnails.
 
 This value sets the timeout value in seconds when retrieving a source image from a URL. 
 If no timeout value is specified, it will wait indefinitely for a response.
+
+``THUMBNAIL_FORCE_OVERWRITE``
+=========================
+
+- Default: ``False``
+
+Whenever we will check an existing thumbnail exists and avoid to overwrite or not.
+Set this to true if you have an slow .exists() implementation on your storage backend of choice,
+this will create the thumbnail without checking if it already exists.
